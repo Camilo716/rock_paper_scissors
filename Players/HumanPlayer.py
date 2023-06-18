@@ -1,13 +1,13 @@
 from Players.IPlayer import IPlayer
-import UI.IRockPaperScsUI;
+from UI.IRockPaperScsUI import IRockPaperScsUI;
 
 class HumanPlayer(IPlayer):
-    def __init__(self, UI):
+    def __init__(self, UI: IRockPaperScsUI):
         self.UI = UI
 
     def choose_move(self):
         while True:
-            UI.read_player_move()
+            self.UI.read_player_move()
             
              
             

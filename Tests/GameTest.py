@@ -1,11 +1,10 @@
 import unittest
-from RockPaperScissors.logic.Moves import Moves
 from RockPaperScissors.logic.RockPaperScissorsGame import RockPaperScissorsGame
+from RockPaperScissors.logic.WinnerHandler import WinnerHandler
 
 from Tests.Stubs.PlayerStubScissors import PlayerStubScissors
 from Tests.Stubs.PlayerStubPaper import PlayerStubPaper
 from Tests.Stubs.PlayerStubRock import PlayerStubRock
-from logic.WinnerHandler import WinnerHandler
 
 class GameTest(unittest.TestCase):
 

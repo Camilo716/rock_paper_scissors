@@ -10,13 +10,14 @@ class HumanPlayer(IPlayer):
         valid_moves = list(move.value for move in Moves)
 
         while True:
-            choosen_move = self.UI.read_player_move()
+            self.choosen_move = self.UI.read_player_move()
             
-            if choosen_move in valid_moves:
+            if self.choosen_move in valid_moves:
                 self.UI.show_game_msj("Invalid Movement")
                 continue
-
-            return choosen_move
+            
+            self.choosen_move = Moves(self.choosen_move).name
+            return  self.choosen_move
             
             
              

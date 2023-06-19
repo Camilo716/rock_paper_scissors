@@ -1,13 +1,25 @@
 from Players.IPlayer import IPlayer
+from RockPaperScissors.logic.Moves import Moves
 from UI.IRockPaperScsUI import IRockPaperScsUI
-import logic.Moves as Moves
 
 class WinnerHandler():
     
     def __init__(self, player1:IPlayer, player2:IPlayer):
-        pass
+        self.player1 = player1
+        self.player2 = player2 
 
     def compare_moves(self):
-        pass
-        
-        
+        P1_move = self.player1.choose_move()
+        P2_move = self.player2.choose_move()
+
+        Player1WinCases = (
+            P1_move == Moves.Rock & P2_move == Moves.Scissors,
+            P1_move == Moves.Paper & P2_move == Moves.Rock,  
+            P1_move == Moves.Scissors & P2_move == Moves.Paper,
+        ) 
+
+        Player2WinCases = (
+            P2_move == Moves.Rock & P1_move == Moves.Scissors,
+            P2_move == Moves.Paper & P1_move == Moves.Rock,  
+            P2_move == Moves.Scissors & P1_move == Moves.Paper,
+        )

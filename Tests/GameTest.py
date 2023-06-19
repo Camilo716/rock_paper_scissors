@@ -18,7 +18,7 @@ class GameTest(unittest.TestCase):
         ]
 
         for player1, player2, winner_expected in WinnerGameCases:
-            winner_handler = WinnerHandler(player1, player2)
+            winner_handler = WinnerHandler(player1, player2, 1)
             
             winner = winner_handler.compare_moves(player1, player2)
 

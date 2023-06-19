@@ -4,10 +4,10 @@ import logic.Moves as Moves
 
 class WinnerHandler():
     
-    def __init__(self):
+    def __init__(self, player1:IPlayer, player2:IPlayer):
         pass
 
-    def compare_moves(self, player1:IPlayer, player2:IPlayer):
+    def compare_moves(self):
         pass
         
         

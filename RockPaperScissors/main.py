@@ -1,14 +1,13 @@
 from Players.HumanPlayer import HumanPlayer
+from RockPaperScissors.logic.RockPaperScissorsGame import RockPaperScissorsGame
+from RockPaperScissors.logic.WinnerHandler import WinnerHandler
 from UI.ConsoleUI import ConsoleUI
 
-consoleUI = ConsoleUI()
-humanPlayer = HumanPlayer(consoleUI)
+console_UI = ConsoleUI()
+human_player = HumanPlayer()
+pc_player = PCPlayer()
 
-ConsoleUI.read_player_move(
-    """
-    Write number of your next move
-    1. Rock
-    3. Paper
-    4. Scissors
-    """
-);
+winner_handler = WinnerHandler(human_player, pc_player)
+game = RockPaperScissorsGame(winner_handler, 3)
+
+game.play_game()

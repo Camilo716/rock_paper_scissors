@@ -4,7 +4,7 @@ import logic.Moves as Moves
 
 class RockPaperScissorsGame():
     
-    def __init__(self, UI:IRockPaperScsUI, winner_handler, rounds:IPlayer):
+    def __init__(self, UI:IRockPaperScsUI, winner_handler, rounds):
         self.UI = UI
         self.winner_handler = winner_handler
 

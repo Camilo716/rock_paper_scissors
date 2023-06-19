@@ -5,6 +5,7 @@ from RockPaperScissors.logic.RockPaperScissorsGame import RockPaperScissorsGame
 from Tests.Stubs.PlayerStubScissors import PlayerStubScissors
 from Tests.Stubs.PlayerStubPaper import PlayerStubPaper
 from Tests.Stubs.PlayerStubRock import PlayerStubRock
+from logic.WinnerHandler import WinnerHandler
 
 class GameTest(unittest.TestCase):
 
@@ -17,9 +18,9 @@ class GameTest(unittest.TestCase):
         ]
 
         for player1, player2, winner_expected in WinnerGameCases:
-            game = RockPaperScissorsGame(player1, player2, 1)
+            winner_handler = WinnerHandler(player1, player2)
             
-            winner = game.compare_moves(player1, player2)
+            winner = winner_handler.compare_moves(player1, player2)
 
             self.assertEqual(winner, winner_expected)     
 

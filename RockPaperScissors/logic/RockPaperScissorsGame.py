@@ -4,16 +4,12 @@ import logic.Moves as Moves
 
 class RockPaperScissorsGame():
     
-    def __init__(self, UI:IRockPaperScsUI, human_player:IPlayer, pc_player:IPlayer, rounds:IPlayer):
+    def __init__(self, UI:IRockPaperScsUI, winner_handler, rounds:IPlayer):
         self.UI = UI
-        self.human_player = human_player
-        self.pc_player = pc_player
+        self.winner_handler = winner_handler
 
     def play_game(self):
         self.finishGame = False;
-
-    def compare_moves():
-        pass
         
         
             

@@ -1,6 +1,5 @@
-from Players.IPlayer import IPlayer
+from RockPaperScissors.Players import IPlayer
 from RockPaperScissors.logic.Moves import Moves
-from UI.IRockPaperScsUI import IRockPaperScsUI
 
 class WinnerHandler():
     

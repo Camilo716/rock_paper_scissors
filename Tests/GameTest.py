@@ -1,5 +1,4 @@
 import unittest
-from RockPaperScissors.logic.RockPaperScissorsGame import RockPaperScissorsGame
 from RockPaperScissors.logic.WinnerHandler import WinnerHandler
 
 from Tests.Stubs.PlayerStubScissors import PlayerStubScissors

@@ -1,5 +1,5 @@
-from Players.IPlayer import IPlayer
-from logic.Moves import Moves
+from RockPaperScissors.Players.IPlayer import IPlayer
+from RockPaperScissors.logic.Moves import Moves 
 
 class PlayerStubScissors(IPlayer):
     def choose_move(self):

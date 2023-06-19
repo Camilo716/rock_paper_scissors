@@ -1,10 +1,15 @@
+import random
+
 from Players.IPlayer import IPlayer
+from RockPaperScissors.logic.Moves import Moves
 from UI.IRockPaperScsUI import IRockPaperScsUI;
 
 class PCPlayer(IPlayer):
-    def __init__(self, UI: IRockPaperScsUI):
-        self.UI = UI
+    def __init__(self):
+        pass
 
     def choose_move(self):
-        while True:
-            self.UI.read_player_move()
+        moves = list(Moves)
+        random_move = random.choice(moves)
+        
+        return random_move

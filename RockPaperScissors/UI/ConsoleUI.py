@@ -8,8 +8,8 @@ class ConsoleUI(IRockPaperScsUI):
             """
                 Write number of your next move
                 1. Rock
-                3. Paper
-                4. Scissors
+                2. Paper
+                3. Scissors
             """ 
         )
     

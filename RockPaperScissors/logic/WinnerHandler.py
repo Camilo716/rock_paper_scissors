@@ -13,15 +13,15 @@ class WinnerHandler():
         P2_move = self.player2.choose_move()
 
         Player1WinCases = (
-            (P1_move == Moves.Rock) & (P2_move == Moves.Scissors),
-            (P1_move == Moves.Paper) & (P2_move == Moves.Rock),  
-            (P1_move == Moves.Scissors) & (P2_move == Moves.Paper),
+            (P1_move == Moves.Rock.name) & (P2_move == Moves.Scissors.name),
+            (P1_move == Moves.Paper.name) & (P2_move == Moves.Rock.name),  
+            (P1_move == Moves.Scissors.name) & (P2_move == Moves.Paper.name),
         ) 
 
         Player2WinCases = (
-            (P2_move == Moves.Rock) & (P1_move == Moves.Scissors),
-            (P2_move == Moves.Paper) & (P1_move == Moves.Rock),  
-            (P2_move == Moves.Scissors) & (P1_move == Moves.Paper),
+            (P2_move == Moves.Rock.name) & (P1_move == Moves.Scissors.name),
+            (P2_move == Moves.Paper.name) & (P1_move == Moves.Rock.name),  
+            (P2_move == Moves.Scissors.name) & (P1_move == Moves.Paper.name),
         )
 
         if self.player1_wins(Player1WinCases):
@@ -32,7 +32,8 @@ class WinnerHandler():
     
     def player1_wins(self, P1_win_cases):
         for case in P1_win_cases:
-            return case == True
+            if case:
+                return True
         
         return False
     

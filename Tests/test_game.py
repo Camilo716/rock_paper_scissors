@@ -1,12 +1,11 @@
 import unittest
-from RockPaperScissors.logic.WinnerHandler import WinnerHandler
+from RockPaperScissors.Logic.WinnerHandler import WinnerHandler
 
 from Tests.Stubs.PlayerStubPaper import PlayerStubPaper
 from Tests.Stubs.PlayerStubRock import PlayerStubRock
 from Tests.Stubs.PlayerStubScissors import PlayerStubScissors
 
 class test_winner_handler(unittest.TestCase):
-
     def test_find_winner(self): 
         stub_paper = PlayerStubPaper("StubPaper")
         stub_rock = PlayerStubRock("StubRock")
@@ -24,6 +23,7 @@ class test_winner_handler(unittest.TestCase):
             winner = winner_handler.compare_moves()
             
             self.assertEqual(winner, winner_expected)     
+
 
 if __name__ == '__main__':
     unittest.main()

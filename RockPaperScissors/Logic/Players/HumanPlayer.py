@@ -1,5 +1,5 @@
 from Players.IPlayer import IPlayer
-from RockPaperScissors.logic.Moves import Moves
+from RockPaperScissors.Logic.Moves import Moves
 from UI.IRockPaperScsUI import IRockPaperScsUI;
 
 class HumanPlayer(IPlayer):

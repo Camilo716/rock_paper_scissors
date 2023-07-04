@@ -1,5 +1,5 @@
-from RockPaperScissors.Players.IPlayer import IPlayer
-from RockPaperScissors.logic.Moves import Moves
+from RockPaperScissors.Logic.Players.IPlayer import IPlayer
+from RockPaperScissors.Logic.Moves import Moves
 
 
 class PlayerStubRock(IPlayer):

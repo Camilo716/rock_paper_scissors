@@ -1,7 +1,7 @@
 import random
 
 from Players.IPlayer import IPlayer
-from RockPaperScissors.logic.Moves import Moves
+from RockPaperScissors.Logic.Moves import Moves
 
 class PCPlayer(IPlayer):
     def __init__(self):

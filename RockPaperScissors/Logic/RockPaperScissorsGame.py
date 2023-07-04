@@ -13,9 +13,3 @@ class RockPaperScissorsGame():
             winner = self.winner_handler.compare_moves()
 
             self.UI.show_game_msj(winner)
-
-
-        
-        
-            
-    

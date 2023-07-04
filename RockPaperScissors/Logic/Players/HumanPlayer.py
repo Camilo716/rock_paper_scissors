@@ -1,4 +1,4 @@
-from Players.IPlayer import IPlayer
+from RockPaperScissors.Logic.Players.IPlayer import IPlayer
 from RockPaperScissors.Logic.Moves import Moves
 from UI.IRockPaperScsUI import IRockPaperScsUI;
 

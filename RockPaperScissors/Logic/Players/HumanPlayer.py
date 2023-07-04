@@ -3,7 +3,8 @@ from RockPaperScissors.Logic.Moves import Moves
 from UI.IRockPaperScsUI import IRockPaperScsUI;
 
 class HumanPlayer(IPlayer):
-    def __init__(self, UI: IRockPaperScsUI):
+    def __init__(self, name, UI: IRockPaperScsUI):
+        super().__init__(name)
         self.UI = UI
 
     def choose_move(self):
@@ -16,7 +17,7 @@ class HumanPlayer(IPlayer):
                 self.UI.show_game_msj("Invalid Movement")
                 continue
             
-            self.name_choosen_move = Moves(int(value_choosen_move)).name
+            self.name_choosen_move = Moves(int(value_choosen_move))
             return  self.name_choosen_move
             
             

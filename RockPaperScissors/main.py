@@ -5,12 +5,10 @@ from RockPaperScissors.Logic.WinnerHandler import WinnerHandler
 from UI.ConsoleUI import ConsoleUI
 
 console_UI = ConsoleUI()
-human_player = HumanPlayer(console_UI)
-pc_player = PCPlayer()
+human_player = HumanPlayer("Human", console_UI)
+pc_player = PCPlayer("Pc")
 
 winner_handler = WinnerHandler(human_player, pc_player)
 game = RockPaperScissorsGame(console_UI, winner_handler, 3)
 
 game.play_game()
-
-print("Hello, World!")

@@ -24,21 +24,14 @@ class WinnerHandler():
             (P2_move == Moves.Scissors) and (P1_move == Moves.Paper),
         )
 
-        if self.player1_wins(Player1WinCases):
+        if self.player_wins(Player1WinCases):
             return self.player1
 
-        if self.player2_wins(Player2WinCases):
+        if self.player_wins(Player2WinCases):
             return self.player2
 
-    def player1_wins(self, P1_win_cases):
-        for case in P1_win_cases:
-            if case:
-                return True
-        
-        return False
-    
-    def player2_wins(self, P2_win_cases):
-        for case in P2_win_cases:
+    def player_wins(self, player_win_cases):
+        for case in player_win_cases:
             if case:
                 return True
         

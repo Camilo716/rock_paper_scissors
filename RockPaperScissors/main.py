@@ -1,7 +1,7 @@
-from Players.HumanPlayer import HumanPlayer
-from RockPaperScissors.Players.PCPlayer import PCPlayer
-from RockPaperScissors.logic.RockPaperScissorsGame import RockPaperScissorsGame
-from RockPaperScissors.logic.WinnerHandler import WinnerHandler
+from RockPaperScissors.Logic.Players.HumanPlayer import HumanPlayer
+from RockPaperScissors.Logic.Players.PCPlayer import PCPlayer
+from RockPaperScissors.Logic.RockPaperScissorsGame import RockPaperScissorsGame
+from RockPaperScissors.Logic.WinnerHandler import WinnerHandler
 from UI.ConsoleUI import ConsoleUI
 
 console_UI = ConsoleUI()

@@ -1,4 +1,4 @@
-from RockPaperScissors.Logic.Players import IPlayer
+from RockPaperScissors.Logic.Players.IPlayer import IPlayer
 from RockPaperScissors.Logic.Moves import Moves
 
 class WinnerHandler():
@@ -24,10 +24,10 @@ class WinnerHandler():
             (P2_move == Moves.Scissors) and (P1_move == Moves.Paper),
         )
 
-        if self.player_wins(Player1WinCases):
+        if self._player_wins(Player1WinCases):
             return self.player1
 
-        if self.player_wins(Player2WinCases):
+        if self._player_wins(Player2WinCases):
             return self.player2
 
     def _player_wins(self, player_win_cases):

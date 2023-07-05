@@ -30,7 +30,7 @@ class WinnerHandler():
         if self.player_wins(Player2WinCases):
             return self.player2
 
-    def player_wins(self, player_win_cases):
+    def _player_wins(self, player_win_cases):
         for case in player_win_cases:
             if case:
                 return True

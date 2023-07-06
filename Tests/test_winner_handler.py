@@ -22,7 +22,26 @@ class test_winner_handler(unittest.TestCase):
             
             winner = winner_handler.compare_moves()
             
-            self.assertEqual(winner, winner_expected)     
+            self.assertEqual(winner, winner_expected)  
+
+    def test_draw_cases(self):
+        stub_paper = PlayerStubPaper("StubPaper")
+        stub_rock = PlayerStubRock("StubRock")
+        stub_scissors = PlayerStubScissors("StubScissors")
+
+        draw_cases = [ 
+            (stub_paper, stub_paper, Draw(stub_paper)),
+            (stub_rock, stub_rock, Draw(stub_paper)),
+            (stub_scissors, stub_scissors, Draw(stub_paper)),
+        ]
+
+        for player1, player2, winner_expected in draw_cases:
+            winner_handler = WinnerHandler(player1, player2)
+            
+            winner = winner_handler.compare_moves()
+            
+            self.assertEqual(winner, winner_expected)  
+        
 
 
 if __name__ == '__main__':

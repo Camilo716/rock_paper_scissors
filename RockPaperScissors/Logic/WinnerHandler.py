@@ -7,32 +7,20 @@ class WinnerHandler():
         self.player1 = player1
         self.player2 = player2 
 
-
     def compare_moves(self):
         P1_move = self.player1.choose_move()
         P2_move = self.player2.choose_move()
 
-        Player1WinCases = (
-            (P1_move == Moves.Rock) and (P2_move == Moves.Scissors),
-            (P1_move == Moves.Paper) and (P2_move == Moves.Rock),  
-            (P1_move == Moves.Scissors) and (P2_move == Moves.Paper),
-        ) 
+        # {case : winner}
+        win_cases = {
+            (Moves.Rock, Moves.Scissors): self.player1,
+            (Moves.Paper, Moves.Rock): self.player1,
+            (Moves.Scissors, Moves.Paper): self.player1,
 
-        Player2WinCases = (
-            (P2_move == Moves.Rock) and (P1_move == Moves.Scissors),
-            (P2_move == Moves.Paper) and (P1_move == Moves.Rock),  
-            (P2_move == Moves.Scissors) and (P1_move == Moves.Paper),
-        )
+            (Moves.Scissors, Moves.Rock): self.player2,
+            (Moves.Rock, Moves.Paper): self.player2,
+            (Moves.Paper, Moves.Scissors): self.player2,
+        }
 
-        if self._player_wins(Player1WinCases):
-            return self.player1
-
-        if self._player_wins(Player2WinCases):
-            return self.player2
-
-    def _player_wins(self, player_win_cases):
-        for case in player_win_cases:
-            if case:
-                return True
-        
-        return False
+        winner = win_cases.get((P1_move, P2_move))
+        return winner
